@@ -116,6 +116,11 @@
             bindings = <&mo 4>;
             key-positions = <37 36>;
         };
+
+        caps {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <0 2>;
+        };
     };
 
     keymap {
