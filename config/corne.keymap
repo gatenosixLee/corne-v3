@@ -121,6 +121,11 @@
             bindings = <&kp CAPSLOCK>;
             key-positions = <0 2>;
         };
+
+        numpad {
+            bindings = <&mo 5>;
+            key-positions = <38 37>;
+        };
     };
 
     keymap {
