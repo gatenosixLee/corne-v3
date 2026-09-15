@@ -87,7 +87,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SIFHT_CTRL_CHANGE";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 6>;
+            bindings = <&none>, <&tog 0>;
         };
     };
 
@@ -200,16 +200,6 @@
 &trans  &kp KP_PLUS     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp HOME        &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp KP_MINUS    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_SLASH    &trans  &trans  &trans  &trans  &trans  &trans
                                          &kp KP_NUMBER_0  &trans           &trans          &trans  &trans  &trans
-            >;
-        };
-
-        shift_ctrl_change {
-            display-name = "SftCtl";
-            bindings = <
-&trans     &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&kp LSHFT  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCTRL  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                           &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
