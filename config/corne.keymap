@@ -101,6 +101,13 @@
             require-prior-idle-ms = <100>;
             flavor = "tap-preferred";
         };
+
+        toggle_mouse_mode: toggle_mouse_mode {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TOGGLE_MOUSE_MODE";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE>, <&mouse_toggle>;
+        };
     };
 
     /*
@@ -173,9 +180,9 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&lt 3 TAB  &kp Q  &kp W  &kp E         &kp R               &kp T                &kp Y        &kp U          &kp I         &kp O    &kp P     &kp GRAVE
-&kp LCTRL  &kp A  &kp S  &kp D         &kp F               &kp G                &kp H        &kp J          &kp K         &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C         &kp V               &kp B                &kp N        &kp M          &kp COMMA     &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+&lt 3 TAB  &kp Q  &kp W  &kp E         &kp R               &kp T                &kp Y        &kp U          &kp I         &kp O             &kp P           &kp GRAVE
+&kp LCTRL  &kp A  &kp S  &kp D         &kp F               &kp G                &kp H        &kp J          &kp K         &kp L             &kp SEMI        &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C         &kp V               &kp B                &kp N        &kp M          &kp COMMA     &mt DOT LEFT_ALT  &mt FSLH RCTRL  &kp RIGHT_SHIFT
                          &kp LEFT_ALT  &mt LEFT_WIN ENTER  &space_lt 1 SPACE    &lt 2 ENTER  &kp BACKSPACE  &lt 3 DELETE
             >;
         };
@@ -232,10 +239,10 @@
         mouse {
             display-name = "Mouse";
             bindings = <
-&trans  &trans    &trans     &trans          &trans        &trans      &kp LC(Y)  &mkp MB4        &mmv MOVE_UP    &mkp MB5         &kp LC(C)        &kp LC(Z)
-&trans  &mkp MB4  &mkp RCLK  &mkp MCLK       &mkp LCLK     &mkp MB5    &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none            &none
-&trans  &trans    &trans     &msc SCRL_DOWN  &msc SCRL_UP  &trans      &trans     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &trans
-                             &trans          &trans        &trans      &mkp RCLK  &mkp LCLK       &mkp MCLK
+&trans  &trans    &trans     &trans          &trans        &trans      &kp LC(C)  &mkp MB4        &mmv MOVE_UP    &mkp MB5         &trans           &trans
+&trans  &mkp MB4  &mkp RCLK  &mkp MCLK       &mkp LCLK     &mkp MB5    &kp LC(V)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans           &trans
+&trans  &trans    &trans     &msc SCRL_DOWN  &msc SCRL_UP  &trans      &kp LC(Z)  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_LEFT   &msc SCRL_RIGHT  &trans
+                             &trans          &trans        &trans      &mkp LCLK  &mkp RCLK       &mkp MCLK
             >;
         };
     };
