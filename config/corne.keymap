@@ -192,10 +192,10 @@
 
         nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp HOME  &kp INSERT      &kp UP_ARROW  &kp DELETE  &kp PAGE_UP    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp END   &kp LEFT_ARROW  &kp DOWN      &kp RIGHT   &kp PAGE_DOWN  &kp RET
-&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans          &trans        &trans      &trans         &trans
-                        &trans  &trans  &trans    &trans    &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp HOME         &kp INSERT      &kp UP_ARROW  &kp DELETE  &kp PAGE_UP    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp END          &kp LEFT_ARROW  &kp DOWN      &kp RIGHT   &kp PAGE_DOWN  &kp RET
+&trans  &trans  &trans  &trans  &trans  &trans    &kp PRINTSCREEN  &trans          &trans        &trans      &trans         &trans
+                        &trans  &trans  &trans    &trans           &trans          &trans
             >;
         };
 
