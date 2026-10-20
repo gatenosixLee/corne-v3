@@ -160,6 +160,11 @@
             bindings = <&kp LEFT_ALT>;
             key-positions = <16 15>;
         };
+
+        enableSpace {
+            bindings = <&tog 7>;
+            key-positions = <11 10>;
+        };
     };
 
     keymap {
@@ -243,6 +248,15 @@
 &trans  &mkp MB4  &mkp RCLK  &mkp MCLK       &mkp LCLK     &mkp MB5    &kp LC(V)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans           &trans
 &trans  &trans    &trans     &msc SCRL_DOWN  &msc SCRL_UP  &trans      &kp LC(Z)  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_LEFT   &msc SCRL_RIGHT  &trans
                              &trans          &trans        &trans      &mkp LCLK  &mkp RCLK       &mkp MCLK
+            >;
+        };
+
+        onlySpace {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &kp SPACE    &trans  &trans  &trans
             >;
         };
     };
